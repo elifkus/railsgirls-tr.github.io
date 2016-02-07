@@ -1,0 +1,271 @@
+* * *
+
+layout: default title: Rails Girls için Kurulum Tarifi permalink: kurulum
+
+* * *
+
+# Rails Girls için Kurulum Tarifi
+
+<span class="muted">Pişme süresi: 5 dakika aktif / 15-30 dakika pasif</span>
+
+Ruby on Rails ile uygulama ve başka şeyler derlemek için bilgisayarınıza bir takım yazılımlar ve geliştirme ortamını kurmamız gerekir.
+
+İşletim sisteminiz için yönergeleri izleyin. Herhangi bir problemle karşılaşırsanız, paniklemeyin. Bize etkinlikte söyleyin böylece beraber çözebiliriz.
+
+  * [OS X için Kurulum](#setup-for-os-x)
+  * [Windows için Kurulum](#setup-for-windows)
+  * [Linux için Kurulum](#setup-for-linux)
+  * [Bütün İşletim Sistemleri için Alternatif Kurulum](#virtual-machine)
+  * [Bir Bulut Servisin Kullanılması - Kuruluma Gerek Yoktur](#using-a-cloud-service)
+
+* * *
+
+## OS X için Kurulum
+
+### *1.* İşletim sisteminizin sürümünü kontrol edelim.
+
+Apple menüsünü tıklayın ve *Bu Mac Hakkında*'yı seçin.
+
+![Apple menü](/images/1.png "Apple menü")
+
+### *2.* Pencerenin içinde işletim sisteminizin sürümünü bulabilirsiniz.
+
+Sürüm numaranız 10.6, 10.7, 10.8, 10.9 veya 10.10 ile başlıyorsa bu rehber size göre. Eğer başka bir şeyse, makinanızı etkinlikte biz kurabiliriz.
+
+![Bu Mac diyalogu hakkında](/images/2.png "Bu Mac diyalogu hakkında")
+
+### *3a.* OS X sürümünüz 10.9 veya daha yüksek ise:
+
+Eğer sürüm numaranız 10,9 veya 10.10 ile başlıyorsa, aşağıdaki adımları izleyin. Homebrew ve rbenv yükleyeceğiz.
+
+#### *3a1.* Terminal'de Komut satırı araçlarını kurun:
+
+{% highlight sh %} xcode-select --install {% endhighlight %}
+
+#### *3A2.* [Homebrew](http://brew.sh/) kurun:
+
+{% highlight sh %} ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" {% endhighlight %}
+
+#### *3a3.* [rbenv](https://github.com/sstephenson/rbenv) kurun:
+
+{% highlight sh %} brew update brew install rbenv rbenv-gem-rehash ruby-build echo 'eval "$(rbenv init -)"' >> ~/.bash_profile echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile source ~/.bash_profile {% endhighlight %}
+
+#### *3a4.* rbenv ile Ruby derleyin:
+
+Ruby'nin en yeni sürümünü "rbenv install -l" komutu ile bulabilirsiniz.
+
+{% highlight sh %} rbenv install 2.2.3 {% endhighlight %}
+
+Eğer "OpenSSL::SSL::SSLError: ... : certificate verify failed" hatası aldıysanız, aşağıdakini deneyin.
+
+{% highlight sh %} brew install curl-ca-bundle cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'` {% endhighlight %}
+
+#### *3a5.* Varsayılan Ruby'yi ayarlayın:
+
+{% highlight sh %} rbenv global 2.2.3 {% endhighlight %}
+
+#### *3a6.* rails'i kurun:
+
+{% highlight sh %} gem i rails --no-ri --no-rdoc {% endhighlight %}
+
+### *3b.* OS X sürümünüz 10.6, 10.7 veya 10.8 ise:
+
+OS X sürümünüze uygun RailsInstaller'i indirin:
+
+  * [10.7 ve 10.8 için RailsInstaller](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.7.app.tgz) <span class="muted">(325 Mb)</span>
+  * [10.6 için RailsInstaller](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.6.app.tgz) <span class="muted">(224 Mb)</span>
+
+Karşıdan yüklenen dosyayı çift tıklatın böylelikle sıkıştırılmış dosya bulunduğunuz dizine açılacaktır. Yeni açılan 'RailsInstaller-1.0.4-osx-10.7.app' veya 'RailsInstaller-1.0.4-osx-10.6.app' dosyasını çift tıklayın ve yönergeleri izleyin. Başında 'Rails Installer OS X' yazan bir BENIOKU (README) dosyası açılacak. Lütfen bu dosyada yazan yönergeleri **yok sayın**.
+
+Eğer Rails sürümü sonuncu sürüm değilse terminalde aşağıdaki komutu kullanarak güncelleştirebilirsiniz.
+
+{% highlight sh %} gem update rails --no-ri --no-rdoc {% endhighlight %}
+
+Herşeyin düzgün çalıştığından emin olmak için uygulama üretme komutunu kullanın.
+
+{% highlight sh %} rails new railsgirls {% endhighlight %}
+
+### *4.* Kod dosyalarını düzenlemek için bir metin editörü indirin
+
+Atölye için metin düzenleyicisi olarak Atom'u öneriyoruz.
+
+  * [Atom'u indirin ve kurun](https://atom.io/)
+
+Mac OS X 10.7 veya daha eski bir sürüm kullanıyorsanız, başka bir editör olan [Sublime Text 2](http://www.sublimetext.com/2)'i kullanabilirsiniz.
+
+### *5.* Tarayıcınızı güncelleyin
+
+[Whatbrowser.org](http://whatbrowser.org)'u açın ve tarayıcınız en son sürümünde değilse güncelleyin.
+
+Artık çalışan bir Ruby on Rails ortamına sahip olmalısınız. Tebrikler!
+
+* * *
+
+## Windows için Kurulum
+
+### *1.* Rails'i kurun
+
+[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.1.0.exe)'ı indirin ve çalıştırın. Varsayılan seçenekleri kullanarak yükleyiciyi ilerletin.
+
+`Ruby on Rails ile komut istemi`ni açın ve aşağıdaki komutu çalıştırın:
+
+{% highlight sh %} rails -v {% endhighlight %}
+
+Rails sürümü 4'den daha az ise, aşağıdaki komutu kullanarak güncelleyin:
+
+{% highlight sh %} gem update rails --no-ri --no-rdoc {% endhighlight %}
+
+Herşeyin düzgün çalıştığından emin olmak için uygulama üretme komutunu kullanın.
+
+{% highlight sh %} rails new railsgirls cd railsgirls rails server {% endhighlight %}
+
+## Olası hatalar
+
+### Gem::RemoteFetcher hatası
+
+Eğer `rails new railsgirls` or `gem update rails` komutlarını çalıştırdığınızda aşağıdaki hatayı aldıysanız:
+
+{% highlight sh %} Gem::RemoteFetcher::FetchError: SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://rubygems.org/gems/i18n- 0.6.11.gem) {% endhighlight %}
+
+Bu Rubygems'in eski bir sürümünün kurulu olduğu anlamına gelir ve güncellemeniz gerekir. Önce Rubygems sürümünüzün ne olduğunu bulun
+
+{% highlight sh %} gem -v {% endhighlight %}
+
+Eğer `2.2.3`'den düşükse kendiniz güncelleştirmeniz gerekir:
+
+İlk önce [ruby-gems-update gem](https://github.com/rubygems/rubygems/releases/download/v2.2.3/rubygems-update-2.2.3.gem)'i indirin. Dosyasyı `c:\\rubygems-update-2.2.3.gem` dizinine taşıyın ve şu komutları çalıştırın:
+
+{% highlight sh %} gem install --local c:\\rubygems-update-2.2.3.gem update_rubygems --no-ri --no-rdoc gem uninstall rubygems-update -x {% endhighlight %}
+
+Rubygems sürümünüzü kontrol edin
+
+{% highlight sh %} gem -v {% endhighlight %}
+
+`2.2.3`'den yüksek olduğundan emin olun. Daha önce hata aldığınız komutu yeniden çalıştırın.
+
+### 'x64_mingw' is not a valid platform` hatası
+
+Bazen `rails sunucusu` çalışırken şu hatayı alabilirsiniz:`'x64_mingw' is not a valid platform` Eğer bu hatayla RailsInstaller kullandıktan sonra karşılaştıysanız `Gemfile` dosyasında küçük bir düzenleme yapmalısınız:
+
+Dosyanın alt kısmına bakın. Dosyanın son satırlarından birinde muhtemelen şunun gibi bir şey göreceksiniz: `gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]`. Eğer bu satırda `:x64_mingw` varsa, lütfen `:x64_mingw` kısmını silin. Sonunda sadece şu olmalı: `'tzinfo-data', platforms: [:mingw, :mswin]`
+
+Bunu yaptıktan sonra, tekrar Komut İstemini kullanın ve `bundle update ` yazın.
+
+### *2.* Kod dosyalarını düzenlemek için bir metin editörü yükleyin
+
+Atölye için Atom metin editörünü öneriyoruz.
+
+  * [Atom'u indirin ve kurun](https://github.com/atom/atom/releases/latest) 
+      * Windows için bir atom zip dosyası indirin ve sıkıştırılmış dosyayı açın.
+      * Dizini Program Files dizininize kopyalayın.
+      * Atom'u dizininde başlatın.
+
+Windows Vista veya daha eski bir sürüm kullanıyorsanız, başka bir editör olan [Sublime Text 2](http://www.sublimetext.com/2)'i kullanabilirsiniz.
+
+Artık çalışan bir Ruby on Rails ortamına sahip olmalısınız. Tebrikler!
+
+### *3.* Tarayıcınızı güncelleyin
+
+Internet Explorer kullanıyorsanız, [Firefox](mozilla.org/firefox) ya da [Google Chrome](google.com/chrome) yüklemenizi öneririz.
+
+[whatbrowser.org](http://whatbrowser.org)'u açın ve tarayıcınız en son sürümünde değilse güncelleyin.
+
+### *4.* node kurun
+
+Bu zorunlu değildir, ama sonradan oluşabilecek ExecJS::RuntimeError problemini engeller ([stackoverflow'a bakın (İngilizce)](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial)).
+
+  * <https://nodejs.org/> linkine gidin ve node'u kurun
+
+Node sürümünüzü kontrol edin
+
+{% highlight sh %} node --version {% endhighlight %}
+
+`0.12`'dan yüksek olduğundan emin olun.
+
+* * *
+
+## Linux için Kurulum
+
+### *1.* Rails'i kurun
+
+Ruby on Rails geliştirme ortamını kurmak için kullandığınız Linux dağıtımı (Ubuntu veya Fedora) için yazılmış aşağıdaki satırı kopyalayıp yapıştırmanız yeterlidir. Terminalize yaptıştırdıktan sonra Enter tuşuna basın. Ekranda uçuşan metnin keyfini çıkarın; bir hayli zaman alacaktır. Başlamadan önce serinletici bir içecek almanız önerilir.
+
+#### Ubuntu için:
+
+{% highlight sh %} bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh) {% endhighlight %}
+
+Eğer RVM kurulumlarını gnome-terminal ile kullanacaksanız, Ruby on Rails'in doğru versiyonunu görmek ve kullanabilmek için muhtemelen varsayılan opsiyonlarını değiştirmeniz gerekecektir. Nasıl yapılacağını öğrenin: [RVM belgeleri](http://rvm.io/integration/gnome-terminal).
+
+#### Fedora için:
+
+{% highlight sh %} bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh) {% endhighlight %}
+
+Herşeyin düzgün çalıştığından emin olmak için uygulama üretme komutunu kullanın.
+
+{% highlight sh %} rails new railsgirls cd railsgirls rails server {% endhighlight %}
+
+### *2.* Kod dosyalarını düzenlemek için bir metin editörü yükleyin
+
+Atölye için metin düzenleyicisi olarak Sublime Text'i öneriyoruz.
+
+  * [Sublime Text'i indirin ve kurun](http://www.sublimetext.com/2)
+
+### *3.* Tarayıcınızı güncelleyin
+
+[whatbrowser.org](http://whatbrowser.org)'u açın ve tarayıcınız en son sürümünde değilse güncelleyin.
+
+Artık çalışan bir Ruby on Rails ortamına sahip olmalısınız. Tebrikler!
+
+* * *
+
+## Sanal Makine
+
+Bütün araçları makinanıza doğrudan kurmak yerine geliştirme ortamınızı bir sanal makinaya da kurabilirsiniz. Detayları \[burda\]({% post_url 2014-03-24-alternative-dev-environment %}) bulabilirsiniz.
+
+* * *
+
+## Bir Bulut Hizmetinin Kullanımı
+
+Ruby on Rails ve editörü bilgisayarınızda kurmak yerine geliştirme için bir web servisi kullanabilirsiniz. İhtiyacınız olan sadece bir tarayıcı ve internet bağlantısı. Bu rehber [nitrous.io](https://nitrous.io) ile nasıl başlayabileceğinizi anlatır. Başka bir servis kullanıyorsanız farklı kelimeler kullanabilirler - örn. 'box' yerine 'workspace', ama süreç oldukça benzerdir.
+
+**Organizatör:** Nitous paralı bir servistir, ama topluluk kullanımı için ücretsizdir. Lütfen aşağıdaki bilgilerle topluluk hesabı için <pro [at] nitrous.io> Nitrous ile iletişime geçin.
+
+  * 'Workspace' ihtiyacı olan insanların eposta adresleri (= üyelerin eposta listesi)
+  * Nitrous'u ne kadar süre ile kullanacakları
+  * Başlangıç tarihi/saati
+  * Ne kadar süre (günler, haftalar vs.) ile erişime ihtiyaçları olduğu
+
+### *1.* Tarayıcınızı güncelleyin
+
+Internet Explorer kullanıyorsanız, [Firefox](mozilla.org/firefox) ya da [Google Chrome](google.com/chrome) yüklemenizi öneririz.
+
+[whatbrowser.org](http://whatbrowser.org)'u açın ve tarayıcınız en son sürümünde değilse güncelleyin.
+
+### *2.* Bir hesap oluşturun
+
+[https://Nitrous.io](https://nitrous.io/)'a gidin ve kayıt olun.
+
+### *3.* Ruby on Rails için bir geliştirme kutusu (development box) / workspace kurun
+
+  * Nitrous hesabınıza giriş yapın
+  * Yeşil 'Open dashboard' butonunu kullanarak kontrol paneline gidin
+  * Bir nitrous kutusu oluşturun: şablonlardan Ruby/Rails'i seçin - her şey olduğu gibi kalabilir, fakat isterseniz kutunuzun adını değiştirebilirsiniz
+  * Kutunun (box) oluşturulması birkaç saniye sürer
+
+### *4.* Geliştirme kutunuzu (development box) bulun ve yeniden başlatın
+
+  * Eğer geliştirme kutunuzu (development box) az önce oluşturduysanız bu adımları atlayabilirsiniz. Nitrous'a tekrar giriş yapıyorsanız bunları bilmenizde fayda var
+  * Kontrol paneline giderek ya da üstteki menüden 'Boxes'ı seçerek nitrous kutularınızı her zaman bulabilirsiniz
+  * Kutuların listesinden kutunuzu seçin
+  * Bir süredir bir kutu kullanmadıysanız hareketsizlik nedeniyle kapatılmış olabilir. Kutunuzun çalışmadığı hakkında bilgilendirildiyseniz ilgili butonu kullanarak yeniden başlatın
+  * Kutunuz çalışır durumdayken kodlamaya başlamak için 'IDE'yi seçin
+
+### *5.*Geliştirme kutunuzla kodlama
+
+  * Sol tarafta dizin ve dosyalarınıza yönlendirebilecek bir dosya tarayıcısı bulursunuz
+  * Ortada dosyalarınızı değiştirebileceğiniz editörü bulursunuz
+  * Aşağıda komutları çalıştıracağınız terminali bulursunuz
+  * İhtiyacınız olan her şey burada tarayıcı pencerenizde - bir editör ya da terminal başlatmanıza gerek yok
+  * Bir rehber ya da tutorialı takip ediyorsanız bir Windows bilgisayarda olsanız bile Linux için olan komutları kullanın - tüm komutlar Linux bir makine olan geliştirme kutusunda çalıştığı için işletim sisteminiz fark etmez
+  * Eğer rehberiniz veya tutorial'ınızda tarayıcıya http://localhost:3000 yazıp gitmenizi istiyorsa, Preview menüsüne gidin ve 'Port 3000'ü seçin
+  * Eğer http://localhost:3000/posts linkini açmanız isteniyorsa, URL'nin sonuna elinizle '/posts' ekleyin
