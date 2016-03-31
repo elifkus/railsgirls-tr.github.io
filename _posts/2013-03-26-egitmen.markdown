@@ -1,0 +1,89 @@
+* * *
+
+layout: default title: Kılavuzlar permalink: egitmen
+
+* * *
+
+# Rails Girls eğitmeni olmak
+
+*Bütün temel soruların tek bir yerde cevaplandı*
+
+### Rails Girls eğitmeni olmak için neye ihtiyacım var?
+
+[Rails Girls](http://railsgirls.com)'ü duydun ve atölyelerden birinde eğitmen olmak için ne gerektiğini merak ediyorsun? Bu müthiş! Web programlamaya yeni başlayanlara yardım etme konusundaki ilgin zaten büyük bir önkoşul! Başka neye ihtiyacın var?
+
+  * Sabır, yardımcı olmak için isteklilik ve dostça bir tutum :)
+  * Atölye süresi boyunca her türlü soruya acemi dostu bir şekilde cevap verebilmek (Açıklama *teknik olarak* tamamen tam olmasa bile).
+  * Web programlama ile deneyim (MVC'nin anlamını biliyorsun, değil mi?), Rails ile olmak zorunda değil.
+  * Etkinlikten önce [temel uygulama öğretici](http://guides.railsgirls.com/app)'ye gözatmak için biraz zaman.
+
+### Neden Rails Girls eğitmeni olmalıyım?
+
+İnanılmaz derecede iyi bir karma dışında mı? Muhtemel kazançların bazıları şunlardır:
+
+  * Her zamanki geliştirici grubun dışında ilginç ve yeni insanlarla tanışacaksın.
+  * Kendi kendine sormayı bile düşünmediğin sorulara cevap vererek muhtemelen yeni şeyler öğreneceksin.
+  * Kız grubun ve Rails Girls topluluğu sana sonsuz şükran duyacak.
+  * Daha önce hiç görmediğin destansı bir [\#FridayHug](http://fridayhug.com).
+  * Kızların teknoloji ve programlama ile ilgilenmediği klişelerini yıkmaya yardımcı olacaksın ve böylece kız kardeşlerinin, kız arkadaş ve akrabalarının, (gelecekteki) kızlarının geleceklerinde daha çok seçeneği olmasına yardım edeceksin. Ve bunların hepsini CV'ne ekleyebilirsin!
+
+### Teknoloji seçimi
+
+Rails Girls atölyeleri katılımcılara Ruby, Rails ve HTML/CSS'in tanıtılması yoluyla yazılım uğraşında ilk deneyimi sağlar. Müfredat bu teknolojiler etrafında oluşturulmuştur. Atölye çok zor ya da kapsamlı ise, çok zor algılanacağı için yeni başlayanları devam etmeye teşvik etmeyecektir. Rails Girls atölyeleri programlamayı hızlı ve etkili şekilde öğrenmek için değildir. Açık ortam, heyecan, kullanılabilecek araçları tanıma ve programlama, topluluk, web uygulamaları ve daha fazlası hakkında öğreneceğin büyük bir gün hakkındadır. Follow up toplantıları gibi eklemeler görmekten mutlu oluruz. Farklı teknoloji ve çatıları kullanan başlangıç seviyesine uygun, kadınlara yönelik bir etkinlik yapmak isterseniz, bunu yapmanızı ve bu materyalleri kullanmanızı teşvik ediyoruz. Rails Girls içeriğinin tümü creative commons altında lisanslıdır.
+
+### Uygulamayı Bitirme Zamanı
+
+Uygulamayı bitirmek için çok vakit var, o yüzden her adımda neler olduğunu yavaş yavaş anlatmak daha önemli. Çok fazla kes yapıştır olduğu için eğer katılımcılar rehberi hızla ilerlerse, çabuk bitirirler ama ne olduğunu hiç anlamayamazlar.   
+Uygulamanın üzerinde oynamak ve başkaları için canlıya almak için ayrılmış ÇOK (4-5 saat) vakit var, dolayısıyla acelemiz yok :)
+
+### Hediye
+
+İster inanın ister inanmayın çoğu kişi için bu gerçekten önemlidir. Bu ortamı farklılaştırır. Nasıl olacağına siz karar verin, ama tüm farkı yaratan ufak süsler (yaka rozetleri), çıkartmalar, cupcake'ler, balonlar, posterler, aklınıza gelen herşeydir.
+
+### Kapsayıcılık
+
+Rails Girls herkes için kapsayıcı, güvenli ve hoş bir deneyimdir. Atölyeler öncelikle acemi kızlara yönelik ve bu belirli kullanıcı grubu için hazırlanmıştır, ancak biz her zaman diğer beceri düzeylerine ve cinsiyetlere açığız. Rails Girls eğitmen kadrosu erkek ve kadınlardan oluşur. Rails Girls'ün nihai amacı daha farklı insanları Rails topluluğuna katılmak için cesaretlendirerek bu topluluğun tümünü zenginleştirmektir. Farklı öğretim programı veya grup yapmak istiyorsan, tüm materyal online ve başka bir isim ve marka altında kullanabilirsin.
+
+### Peki daha önce Rails ile ilgili bir şey yapmadıysam?
+
+Neden henüz yapmadın? Şaka yapıyorum. Bu bir sorun değil, senin gibi bir sürü eğitmenimiz oldu ve onlar *harika*. Benzer herhangi bir frameworkle rahat çalıştığın sürece, iyi olacaksın. [Temel uygulama rehberi](http://guides.railsgirls.com/app)'ne bir göz at ve büyük olasılıkla neler olduğunu çok kısa sürede anlayacaksın. Sana neleri açıklayabilmen gerektiğinden bahseden "**Eğitmen**" kısmına dikkat et.
+
+Genellikle etkinlikte Rails ile düzenli olarak çalışan en az biri olur, bu yüzden yükleme paketleri üzerinden gitmek garipleştiğinde yardım istemekten korkma. Ayrıca, olağandışı bir şeyle karşılaşırsan, grubunla Google'la! Her şeyi bilmediğini kabul etmen ve kızlara günlük programlama sorunlarını çözmek için Google'ı nasıl kullandığını göstermen sorun değil.
+
+### Bir eğitmen olarak tam anlamıyla ne yapacağım?
+
+Atölye yapısı şehirden şehire değişebilir, bu yüzden yerel organizatör grubun detaylarla ilgili sana rehberlik edecektir. Genellikle eğitmenlerle etkinlik öncesi bir toplantı ya da akşam yemeği olur, bütün sorularını orada sorabilirsin.
+
+### Soruları cevaplama
+
+Çoğunlukla katılımcılardan sadece bir adım önde önde olan eğitmenler açıklamada en iyilerdir :) Gerçek hayat metaforları kullanın ve daha genel açıklamalar yapın. Çok kapsamlı açıklamalar başlangıçta gereksiz olan bilgi seline sebep olur.
+
+#### Yükleme partisi
+
+Genel olarak, Rails Girls atölyeleri kızlara [gerekli yazılımı yükleme](http://guides.railsgirls.com/install/) (Rails ve bir metin düzenleyicisi) kısmında yardım edeceğin yükleme partisi ile başlar. Tüm işletim sistemleri konusunda uzman olmak zorunda değilsin, aşina olduğun sistemde yardım edebilirsin.
+
+#### İlk uygulamalarını yapan kızlara yardım
+
+Ertesi gün boyunca, gösterinin yıldızı olacaksın ve tutorialın yardımı ile 2 ila 5 kızdan oluşan grubunun Rails ile ilk [web uygulaması](http://guides.railsgirls.com/app)'nı yapmasına yardım edeceksin. Bu genellikle ilk bir dizi ders sonrası sabah 11 gibi bir zamanda olur (öncelikle onlar sana kahve ikram edecekler).
+
+İhtiyacın olan tüm hazırlık genellikle evde kendi başına tutorial üzerinden geçmek olacak. Kızların ekranlarında uygulama rehberi olacak, dolayısıyla her adımda ne olduğunu açıklayarak süreç boyunca onlara sadece rehberlik edeceksin. Açıklamalar çok teknik olmamalı; kolay hatırlanabilir metaforlarla cevabı basitleştirmeyi dene. Ve Rails Girls atölyesinde aptal soru diye bir şey olmadığını unutma! Kızlar süreç boyunca sana herhangi bir şey hakkında soru sorabileceklerini bilsin; onların daha ilginç bulduğu kısımlara daha çok zaman ayırabilirsin.
+
+Ayrıca, bazen birkaç farklı açıklama yapmayı denemen gerekirse cesaretin kırılmasın. Kızların çoğu başlangıç seviyesinde olacaktır, dolayısıyla mevcut referans noktaları olmayacaktır (bonus: bazı programcıların edindiği kötü alışkanlıkları da olmayacaktır). Temel uygulama tutorial'ının sonuna gelirsen sonda ek kılavuzlara bakabilirsin veya ekibin en çok neyle ilgileniyorsa onun üzerinde çalışabilirsin. Tasarım genelde popüler bir seçim, ama bazı kızlar başka bir uygulama yapmak isteyecektir. Kendi egzersizlerini de hazırlayabilirsin veya yardımcı kaynakları (dokümantasyon gibi) keşfedebilirsin.
+
+Herhangi bir şeyde yardıma ihtiyacın olursa, Google kullanmaktan ya da sana yardım edebilecek başka bir eğitmene sormaktan korkma. Ve ihtiyacın olursa ara istemekten çekinme, uzun bir gün olacak, ama eve yüzünde büyük bir gülümseme ve sevgi dolu bir kalple döneceğine söz verebiliriz :)
+
+  * Lucy Bain'in ek [uygulama için öğretim notlarını](https://github.com/lbain/railsgirls) kontrol edin
+
+### Var mısın?
+
+Güzel, seni aramızda görmekten mutluyuz! Yerel organizatörlerle iletişime geç (eğer henüz geçmediysen), diğer bütün sorularını cevaplayacaklardır. İletişim bilgilerini genellikle etkinlik sayfasında bulabilirsin.
+
+Eğer bir Rails Girls atölyesi zamanında yurt dışına seyahat ediyorsan, ziyaret edeceğin şehrin organizatörleriyle temasa geçmekten çekinme; ilave eğitmenleri karşılamaktan her zaman mutluluk duyarız! Bir Rails Girls atölyesinin yeni bir şehri ziyaret etmek için harika bir bahane olduğunu saymıyorum ;)
+
+Rails Girls eğitmenleri için diğer ilk elden büyük ipuçlarından bazıları:
+
+  * [Rails Girls Berlin'deki eğitmenlikten öğrenilen 4 ders](http://pragtob.wordpress.com/2012/08/14/4-lessons-learned-from-teaching-at-rails-girls-berlin/)
+  * [#railsgirlslj'e sızdım, işte nasıl bir şey olduğu](http://swizec.com/blog/i-infiltrated-railsgirlsj-heres-what-it-was-like/swizec/5717)
+  * [Atölye katılımcılarının öğrenmeyi sürdürmesini sağlayacak 8 yol](http://pragtob.wordpress.com/2013/06/14/8-ways-to-enable-workshop-attendess-to-keep-learning/)
+  * [Rails öğrenmekten/ iyi bir öğretmen olmaktan ne öğrendim](http://floordrees.tumblr.com/post/58784746482/what-i-learned-learning-rails-becoming-a-better)
+  * [Bir programlama çalışma grubuna eğitmenlik yapmak için ipuçları](http://coaching.rubymonstas.org/)

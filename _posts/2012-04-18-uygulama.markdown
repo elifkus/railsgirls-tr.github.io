@@ -1,0 +1,369 @@
+* * *
+
+layout: default title: Rails Girls App Tutorial permalink: uygulama
+
+* * *
+
+# Rails Girls App Tutorial
+
+*Vesa Vänskä, [@vesan](https://twitter.com/vesan) tarafından oluşturuldu*
+
+**Rails'i kurmuş olduğunuzdan emin olun.** Kurulum için [**kurulum rehberini takip edin**](/install).
+
+## Araçları öğrenin
+
+<div class="indent">
+  <h3>
+    <i class="icon-text-editor">&nbsp;</i>
+  </h3>
+  
+  <h3>
+    Metin Editörü
+  </h3>
+  
+  <ul>
+    <li>
+      <a href="https://atom.io/">Atom</a>, <a href="http://www.sublimetext.com">Sublime Text</a>, Vim ve Emacs, kod yazmak ve dosyaları değiştirmek için için kullanabileceğiniz metin editörleridir.
+    </li>
+  </ul>
+  
+  <h3>
+    <i class="icon-prompt">&nbsp;</i>
+  </h3>
+  
+  <h3>
+    Terminal (Windows'ta Komut İstemi)
+  </h3>
+  
+  <ul>
+    <li>
+      Rails sunucusunu başlattığınız ve komutları çalıştırdığınız yer.
+    </li>
+  </ul>
+  
+  <h3>
+    <i class="icon-browser">&nbsp;</i>
+  </h3>
+  
+  <h3>
+    Web tarayıcısı
+  </h3>
+  
+  <ul>
+    <li>
+      Uygulamanıza bakabileceğiniz uygulama (Firefox, Safari, Chrome).
+    </li>
+  </ul>
+</div>
+
+### Önemli
+
+İşletim sisteminiz için yazılmış yönergeleri seçmeniz önemli - Windows'ta çalıştırmanız gereken komutlar Mac ve Linux'takinden biraz farklı. Eğer problem yaşarsanız komutların altındaki İşletim Sistemi seçicisini kontrol edin. Eğer bir bulut sağlayıcısı (örn. nitrous) kullanıyorsanız, Windows makinada olmanıza rağmen Linux komutlarını kullanmanız gerekir.
+
+## *1.* Uygulama oluşturma
+
+*Railsgirls* isminde yeni bir Rails uygulaması oluşturuyoruz.
+
+İlk olarak, terminali açalım:
+
+  * Mac OS X için: Spotlight'ı açın, *Terminal* yazın, ve *Terminal* uygulamasına tıklayın.
+  * Windows için: Başlat'ı tıklayın ve *Komut İstemi* ni bulun, sonra *Ruby on Rails ile Komut İstemi* ne tıklayın.
+  * Linux (Ubuntu/Fedora) için: Dash'te *Terminal* i arayın ve *Terminal* e tıklayın.
+  * Bulut servis (örneğin; nitrous) için: Hesabınızla giriş yapın, servisinizi başlatın ve IDEsine girin (ayrıntılı bilgi için [yükleme kılavuzu](/install#using-a-cloud-service)na bakın). Terminal genellikle tarayıcı penceresinin alt kısmındadır.
+
+Sonra şu komutları terminalde çalıştırın:
+
+<div class="os-specific">
+  <div class="nix">
+    {% highlight sh %} mkdir projects {% endhighlight %} 
+    
+    <div>
+      <p>
+        <code>projects</code> adında bir dizinin oluşturulduğunu, liste komutu <code>ls</code> i çalıştırarak kontrol edebilirsin. <code>projects</code> dizinini çıktıda görmelisin. İçinde bulunduğun dizini, <code>projects</code> klasörüne değiştirmek için şu komutu çalıştırmalısın:
+      </p>
+    </div> {% highlight sh %} cd projects {% endhighlight %} 
+    
+    <div>
+      <p>
+        Tekrar <code>ls</code> komutunu çalıştırarak, boş bir dizin ya da klasör içinde olduğunu kontrol edebilirsin. Şimdi, <code>railsgirls</code> adında bir uygulama oluşturmak için şu komutu kullanmalısın:
+      </p>
+    </div> {% highlight sh %} rails new railsgirls {% endhighlight %} 
+    
+    <div>
+      <p>
+        Bu; <code>railsgirls</code> klasörü içinde yeni bir uygulama oluşturacak, dolayısıyla, tekrar dizinimizi şu komutu çalıştırarak rails uygulamamızın bulunduğu yere değiştirmek isteriz:
+      </p>
+    </div> {% highlight sh %} cd railsgirls {% endhighlight %} 
+    
+    <div>
+      <p>
+        Eğer <code>ls</code> komutunu klasör içinde çalıştırsanız <code>app</code> ve<code>config</code> dosyalarını göreceksiniz. Artık Rails sunucunu çalıştırabilirsiniz:
+      </p>
+    </div> {% highlight sh %} rails server {% endhighlight %}
+  </div>
+  
+  <div class="win">
+    {% highlight sh %} mkdir projects {% endhighlight %} 
+    
+    <div>
+      <p>
+        <code>projects</code> adında bir dizinin oluşturulduğunu, liste komutu <code>ls</code> i çalıştırarak kontrol edebilirsin. <code>projects</code> dizinini çıktıda görmelisin. İçinde bulunduğun dizini, <code>projects</code> klasörüne değiştirmek için şu komutu çalıştırmalısın:
+      </p>
+    </div> {% highlight sh %} mkdir projects {% endhighlight %} 
+    
+    <div>
+      <p>
+        Tekrar <code>ls</code> komutunu çalıştırarak, boş bir dizin ya da klasör içinde olduğunu kontrol edebilirsin. Şimdi, <code>railsgirls</code> adında bir uygulama oluşturmak için şu komutu kullanmalısın:
+      </p>
+    </div> {% highlight sh %} rails new railsgirls {% endhighlight %} 
+    
+    <div>
+      <p>
+        Bu; <code>railsgirls</code> klasörü içinde yeni bir uygulama oluşturacak, dolayısıyla, tekrar dizinimizi şu komutu çalıştırarak rails uygulamamızın bulunduğu yere değiştirmek isteriz:
+      </p>
+    </div> {% highlight sh %} cd railsgirls {% endhighlight %} 
+    
+    <div>
+      <p>
+        Eğer <code>ls</code> komutunu klasör içinde çalıştırsanız <code>app</code> ve<code>config</code> dosyalarını göreceksiniz. Artık Rails sunucunu çalıştırabilirsiniz:
+      </p>
+    </div> {% highlight sh %} rails server {% endhighlight %}
+  </div>
+</div>
+
+<http://localhost:3000>u tarayıcınızda açın. Bir bulut Servisi (örneğin azot) kullanıyorsanız, önizleme işlevselliğini kullanın (Ayrıntılar için [Yükleme kılavuzuna](/install#using-a-cloud-service) bakın).
+
+"Welcome aboard" sayfasını görüyor olmalısınız. Bu yeni uygulamanızın oluşturulmasının doğru bir şekilde çalıştığı anlamına gelir.
+
+Bu pencerede komut isteminin görünür olmadığını fark edeceksiniz çünkü artık Rails sunucusundasındasınız, komut istemi şu şekilde görünür:
+
+<div class="os-specific">
+  <div class="nix">
+    {% highlight sh %} $ {% endhighlight %}
+  </div>
+  
+  <div class="win">
+    {% highlight sh %} > {% endhighlight %}
+  </div>
+</div>
+
+Komut istemi görünür olmadığında yeni komutlar çalıştıramazsınız. Eğer `cd` ya da başka bir komutu çalıştırmayı denerseniz bu çalışmayacaktır. Normal komut istemine dönmek için:
+
+Sunucuyu kapatmak için terminalde <kbd>Ctrl</kbd>+<kbd>C</kbd> e basın.
+
+**Eğitmen:** Her komutun ne işe yaradığını açıklayın. Ne üretildi? Sunucu ne yaptı?
+
+## *2.*Fikir iskelesini oluşturmak
+
+Bize listeleme, ekleme, çıkarma, düzenleme ve bir şeyleri, bizim durumumuzda fikirleri, görüntüleme için bir başlangıç noktası oluşturacak Rails iskele özelliğini kullanacağız.
+
+**Eğitmen:**Rails iskele yapısı nedir? (Komutu, model ismini ve ilişkili veritabanı tablosunu, isimlendirme düzenlerini, özellikleri ve tipleri vb. açıklayın) Göçler nelerdir ve göçlere neden ihtiyacınız vardır?
+
+{% highlight sh %} rails generate scaffold idea name:string description:text picture:string {% endhighlight %}
+
+İskele proje dizinimizde yeni dosyalar oluşturacak ama bunları düzgün bir şekilde çalıştırabilmek için veritabanımızı güncelleyecek ve sunucuyu tekrar başlatacak birkaç komut çalıştırmamız gerekiyor.
+
+<div class="os-specific">
+  <div class="nix">
+    {% highlight sh %} bin/rake db:migrate rails server {% endhighlight %}
+  </div>
+  
+  <div class="win">
+    {% highlight sh %} ruby bin/rake db:migrate rails server {% endhighlight %}
+  </div>
+</div>
+
+Tarayıcınızdan <http://localhost:3000/ideas> adresini açın. Bulut servisi (örneğin; nitrous) kullanıcıları ön izleme linklerine '/ideas' kısmını eklemelidir. ([kurulum klavuzuna](/install#using-a-cloud-service) bakın).
+
+Etrafa tıklayın ve şu birkaç komut-satırı komutlarını çalıştırarak neler var test edin.
+
+Biraz gezindikten sonra sunucudan çıkmak için <kbd>Ctrl</kbd>+<kbd>C</kbd> tuşlarına basın.
+
+## *3.*Tasarım
+
+**Eğitmen:** HTML ve Rails arasındaki ilişki hakkında konuşun. View'lerin hangi kısmı HTML, hangi kısmı Embedded Rubby (ERB)? MVC nedir ve bununla ilişkisi ne? (Modeller ve denetleyiciler HTML view'ları oluşturmaktan sorumludur.)
+
+Uygulama henüz çok hoş görünmüyor. Bu konuda bir şeyler yapalım. Güzel görünümü kolayca sağlamak için Twitter Bootstrap projesini kullanacağız.
+
+`app/views/layouts/application.html.erb` dosyasını metin editöründe açın ve aşağıdaki satırın üzerine
+
+{% highlight erb %} <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %> {% endhighlight %}
+
+ekleyin
+
+{% highlight erb %} 
+
+<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css" />
+
+<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css" />
+{% endhighlight %}
+
+ve aşağıdaki satırı
+
+{% highlight erb %} <%= yield %> {% endhighlight %}
+
+aşağıdakiyle değiştirin
+
+{% highlight erb %}
+
+<div class="container">
+  <%= yield %>
+</div>
+
+{% endhighlight %}
+
+Şimdi de layouta bir gezinti çubuğu ve altbilgi ekleyelim. Aynı dosyada, `< body >` altında ekle
+
+{% highlight html %}<nav class="navbar navbar-default navbar-fixed-top" role="navigation"> 
+
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Yönlendirmeyi aktifleştir</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="/">Fikir uygulaması</a>
+  </div>
+  
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="/ideas">Fikirler</a>
+      </li>
+    </ul>
+  </div>
+</div></nav> 
+
+{% endhighlight %}
+
+ve `</body>` den önce aşağıdakini ekleyin
+
+{% highlight html %}<footer> 
+
+<div class="container">
+  Rails Girls 2015
+</div></footer> 
+
+{% endhighlight %}
+
+Şimdi de fikirler tablosunun görünümünü değiştirelim. `app/assets/stylesheets/application.css` dosyasını açın ve en alta aşağıdakini ekleyin
+
+{% highlight css %} body { padding-top: 100px; } footer { margin-top: 100px; } table, td, th { vertical-align: middle; border: none; } th { border-bottom: 1px solid #DDD; } {% endhighlight %}
+
+Şimdi dosyalarınızı kaydettiğinden emin olun ve değişiklikleri görmek için tarayıcınızı yenileyin. HTML & CSS i daha fazla da değiştirebilirsiniz.
+
+Eğer terminaliniz size bir şekilde *JavaScript'iniz ya da CoffeeScript'iniz ile ilgili* bir hata olduğunu ima ediyorsa [nodejs'i yükleyin](http://nodejs.org/download/). Bu sorun RailsInstaller kullandığınızda ortaya çıkmamalıdır (Rails'i şu komut ile kurduysanız ortaya çıkar: ```gem install rails```).
+
+**Eğitmen:** Biraz CSS ve düzenleri hakkında konuşun.
+
+## *4.*Resim yüklemelerini eklemek
+
+Rails'de dosya yüklemek için bir yazılım yüklememiz gerekiyor.
+
+Metin editörünüzü kullanarak proje dizininiz altında bulunan `Gemfile` dosyasını açın ve aşağıdaki satırın altına
+
+{% highlight ruby %} gem 'sqlite3' {% endhighlight %}
+
+aşağıdaki satırı ekleyin
+
+{% highlight ruby %} gem 'carrierwave' {% endhighlight %}
+
+**Eğitmen:**Kütüphanelerin ne olduğunu ve neden kullanışlı olduklarını açıklayın. Açık kaynak yazılımın ne olduğunun tanımını yapın.
+
+Sunucuyu kapatmak için terminalde <kbd>Ctrl</kbd>+<kbd>C</kbd> e basın.
+
+Terminalde şunu çalıştırın:
+
+{% highlight sh %} bundle {% endhighlight %}
+
+Şimdi yüklemeleri yapacak kodu üretebiliriz. Terminalde şunu çalıştırın:
+
+{% highlight sh %} rails generate uploader Picture {% endhighlight %}
+
+Şimdi lütfen rails sunucusunu başlatın.
+
+Not: Bazılarınız rails sunucusunu sürekli çalıştırmak için ikinci bir terminal kullanıyor olabilir. Eğer öyle yapıyorsanız şimdi **Rails sunucunun sürecini yeniden başlatmanız** gerekiyor. Bu eklenen kütüphanenin uygulamaya yüklenmesi için gereklidir.
+
+`app/models/idea.rb` dosyasını açın ve aşağıdaki satırın altına
+
+{% highlight ruby %} class Idea < ActiveRecord::Base {% endhighlight %}
+
+şu satırı ekleyin
+
+{% highlight ruby %} mount_uploader :picture, PictureUploader {% endhighlight %}
+
+`app/views/ideas/_form.html.erb` dosyasını açın ve aşağıdaki satırı
+
+{% highlight erb %} <%= f.text_field :picture %> {% endhighlight %}
+
+şununla değiştirin
+
+{% highlight erb %} <%= f.file_field :picture %> {% endhighlight %}
+
+Bazen *TypeError: can't cast ActionDispatch::Http::UploadedFile to string* hatasını alabilirsiniz.
+
+Eğer bu hatayı alırsanız, `app/views/ideas/_form.html.erb` dosyasında şu satırı
+
+{% highlight erb %} <%= form_for(@idea) do |f| %> {% endhighlight %}
+
+şununla değiştirin
+
+{% highlight erb %} <%= form_for @idea, :html => {:multipart => true} do |f| %> {% endhighlight %}
+
+Tarayıcınızda resimli bir fikir ekleyin. Şu an bir resim yüklediğinizde güzel görünmüyor çünkü şimdi sadece dosyanın yolunu gösteriyor, o yüzden bunu düzeltelim.
+
+`app/views/ideas/show.html.erb` dosyasını açın ve şu satırı
+
+{% highlight erb %} <%= @idea.picture %> {% endhighlight %}
+
+şununla değiştirin
+
+{% highlight erb %} <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %> {% endhighlight %}
+
+Şimdi, ne değiştiğini görmek için sayfayı yenileyin.
+
+**Eğitmen:** Biraz HTML hakkında konuşun.
+
+## *5.*Rotaları Düzenlemek
+
+<http://localhost:3000> linkini açın (bulut servisi kullanıyorsanız ön izleme linkinizi açın). Hala "Welcome aboard" sayfasını gösteriyor. Hadi fikirler sayfasına yönlendirmesini sağlayalım.
+
+`config/routes.rb` dosyasını açın ve ilk satırdan sonra ekleyin
+
+{% highlight ruby %} root :to => redirect('/ideas') {% endhighlight %}
+
+Değişikliği tarayıcınızda başlangıç yolunu (bu <http://localhost:3000/> ya da ön izleme linkinizdir) açarak test edin.
+
+**Eğitmen:**Rotalar hakkında konuşun ve rotaların sıralaması ve statik dosyalarla ilişkilerini anlatın.
+
+**Rails 3 kullanıcıları:**Bunun çalışması için `/public` dizininden index.html dosyasını silmeniz gerekmektedir.
+
+## Uygulamanızda statik sayfa oluşturma
+
+Hadi uygulamamıza bu uygulamayı yazan kişiyle ilgili - sen! - bilgileri gösterecek statik bir sayfa ekleyelim.
+
+{% highlight sh %} rails generate controller pages info {% endhighlight %}
+
+Bu komut `app/views` dizini altına `/pages` adında yeni bir dizin ve bu dizinin altına sizin bilgi sayfanız olacak `info.html.erb` adında yeni bir dosya oluşturacaktır.
+
+Ayrıca bu sizin routes.rb dosyanızın altına basit bir yol ekler.
+
+{% highlight ruby %} get "pages/info" {% endhighlight %}
+
+Şimdi `app/views/pages/info.html.erb` dosyasını açabilir ve HTML'e kendinizle ilgili bilgi ekleyebilirsiniz. Yeni bilgi sayfanızı görebilmek için tarayıcınızda <http://localhost:3000/pages/info> linkini açın ya da eğer bulut servis kullanıcısı iseniz ön izleme linkinize '/pages/info' yazısını ekleyin.
+
+## *6+.*Sırada ne var?
+
+  * HTML & CSS kullanarak tasarım ekle
+  * Oylama veya derecelendirme ekle
+  * Etkileşim eklemek icin CoffeeScript (ya da JavaScript) kullanın
+  * Resimlerin daha hızlı yüklenebilmesi için resimleri yeniden boyutlandırmayı eklemek
+
+## Ek Kılavuzlar
+
+  * Kılavuz 0: [Handy cheatsheet for Ruby, Rails, console etc.](https://github.com/PragTob/rails-beginner-cheatsheet)
+  * Kılavuz 1: [Add commenting by Janika Liiv](/commenting)
+  * Kılavuz 2: [Put your app online with Heroku by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift) / [Put your app online with Shelly Cloud](/shellycloud) / [Put your app online with anynines](/anynines) / [Put your app online with Trucker.io](/trucker)
+  * Kılavuz 3: [Create thumbnail images for the uploads by Miha Filej](/thumbnails)
+  * Kılavuz 4: [Add design using HTML & CSS by Alex Liao](/design)
+  * Kılavuz 5: [Add Authentication (user accounts) with Devise by Piotr Steininger](/devise/)
+  * Kılavuz 6: [Gravatar ile profil resimleri eklemek](/gravatar)
+  * Kılavuz 7: [Uygulamanızı RSpec ile test edin](/testing-rspec)
+  * Kılavuz 8: [Continuous Deployment with Travis-CI](/continuous-travis) / [Continuous Deployment with Codeship](/continuous) / [Continuous Deployment with Snap CI](/continuous-snap-ci)kılavuzkılavuz
+  * Kılavuzu 9: [ Lucy Bain tarafından App için ek açıklamalar üzerinden gidin ](https://github.com/lbain/railsgirls)
