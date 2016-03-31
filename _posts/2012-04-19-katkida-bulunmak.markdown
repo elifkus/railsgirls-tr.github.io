@@ -1,10 +1,10 @@
-* * *
+---
+layout: default
+title: Bir Kılavuz Yazarak Katkıda Bulunmak
+permalink: katki
+---
 
-layout: default title: Contributing a Guide permalink: katki
-
-* * *
-
-# Kılavuza Katkıda Bulunma
+# Bir Kılavuz Yazarak Katkıda Bulunmak
 
 Rehberler sitesi [jekyll](https://github.com/mojombo/jekyll) ile çalışır ve tüm belgeler [markdown](http://daringfireball.net/projects/markdown/) kullanılarak yazıldı. Bir rehber eklemek için, sadece aşağıdaki adımları takip etmeniz gerekir.
 

@@ -1,8 +1,8 @@
-* * *
-
-layout: default title: Rails Girls için Kurulum Tarifi permalink: kurulum
-
-* * *
+---
+layout: default
+title: Rails Girls için Kurulum Tarifi
+permalink: kurulum
+---
 
 # Rails Girls için Kurulum Tarifi
 
