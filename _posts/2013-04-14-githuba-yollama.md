@@ -1,12 +1,8 @@
-* * *
-
+---
 layout: default
-
 title: Uygulamanızı Github'a Yolllama
-
 permalink: githuba-yollama
-
-* * *
+---
 
 # Uygulamanızı GitHub'a yollama
 
