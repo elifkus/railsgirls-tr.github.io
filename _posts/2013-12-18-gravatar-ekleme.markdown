@@ -1,8 +1,8 @@
-* * *
-
-layout: default title: Uygulamanıza Gravatar Eklemek permalink: gravatar-eklemek
-
-* * *
+---
+layout: default
+title: Uygulamanıza Gravatar Eklemek
+permalink: gravatar-eklemek
+---
 
 # Uygulamanıza Gravatar Eklemek
 
