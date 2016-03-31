@@ -1,8 +1,8 @@
-* * *
-
-layout: default title: Rails Girls App Tutorial permalink: uygulama
-
-* * *
+---
+layout: default
+title: Rails Girls App Tutorial
+permalink: uygulama
+---
 
 # Rails Girls App Tutorial
 
