@@ -1,8 +1,8 @@
-* * *
-
-layout: default title: Kılavuzlar permalink: egitmen
-
-* * *
+---
+layout: default
+title: Kılavuzlar
+permalink: egitmen
+---
 
 # Rails Girls eğitmeni olmak
 
