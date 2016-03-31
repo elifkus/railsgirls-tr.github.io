@@ -1,8 +1,8 @@
-* * *
-
-layout: default title: Bir Kılavuz Yazarak Katkıda Bulunmak permalink: katki
-
-* * *
+---
+layout: default
+title: Bir Kılavuz Yazarak Katkıda Bulunmak
+permalink: katki
+---
 
 # Kılavuz Ekleyerek Katkıda Bulunmak
 
